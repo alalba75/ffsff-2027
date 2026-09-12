@@ -243,8 +243,32 @@ body.doc .topnav nav a:hover, body.doc .topnav nav a[aria-current="page"]{color:
   color:var(--grey-dim);
 }
 
+.schedule{width:100%;border-collapse:collapse;margin-top:16px;font-family:'Courier Prime',monospace;font-size:0.92rem;}
+.schedule th{text-align:left;color:var(--grey);font-weight:400;border-bottom:1px solid var(--line);padding:8px 12px 8px 0;letter-spacing:0.05em;}
+.schedule td{border-bottom:1px solid var(--line-soft);padding:12px 12px 12px 0;vertical-align:top;color:var(--white);}
+.schedule td.time{color:var(--grey);white-space:nowrap;width:1%;}
+.schedule td p{margin:4px 0 0;color:var(--grey);font-family:'Cormorant Garamond',serif;font-size:1.02rem;}
+
+.speaker-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:20px;}
+.speaker-card h3{margin:0 0 2px;color:var(--white);font-weight:600;font-size:1.25rem;}
+.speaker-card .title{font-family:'Courier Prime',monospace;font-size:0.8rem;color:var(--grey);margin-bottom:8px;line-height:1.4;}
+.speaker-card p{margin:0;color:var(--grey);font-size:0.98rem;}
+
+.venue-note{
+  font-family:'Courier Prime',monospace;
+  font-size:0.88rem;
+  color:var(--grey);
+  border:1px dashed var(--line);
+  padding:14px 16px;
+  margin:18px 0 4px;
+}
+
 @media (max-width:520px){
   .stamp{position:static;transform:rotate(-8deg);margin:14px auto 0;}
   .doc-head h1{margin-top:0;}
   .hero .emblem{width:260px;}
+  .schedule, .schedule tbody, .schedule tr, .schedule td{display:block;width:100%;}
+  .schedule td.time{width:auto;padding-bottom:0;}
+  .schedule tr{padding:12px 0;border-bottom:1px solid var(--line-soft);}
+  .schedule td{border-bottom:none;padding:2px 0;}
 }
